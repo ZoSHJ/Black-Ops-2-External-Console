@@ -25,4 +25,6 @@ Acknowledgements
 ===============
 - Zura: For sending me the first source code I had.
 - Azyx: For inspiring, helping me get started with the console and supporting me in this trip I took 5 months ago.
-- And all the people who downloaded, used and gave feedback.
+- All the people who downloaded, used and gave feedback.
+- And Stormzy aKa hanzalrocks who motivated me to stop him from getting money that does not belong to him.
+
