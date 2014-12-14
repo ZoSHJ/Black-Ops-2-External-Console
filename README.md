@@ -19,7 +19,7 @@ Every method retrieves true (if it was successfully executed) or false (if it fa
 
 Caution
 =======
-The t6zm address is NOT updated and therefore i may cause a VAC ban, so please get the correct address before using the code for Black Ops 2 Zombies
+The t6zm address is NOT updated and therefore it may cause a VAC ban, so please get the correct address before using the code for Black Ops 2 Zombies
 
 Acknowledgements
 ===============
