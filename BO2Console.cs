@@ -8,8 +8,8 @@ using System.Diagnostics;
 public class BO2Console
 {
     // Update the addresses here
-    private static int mpaddress = 0x5c6f10;
-    private static int zmaddress = 0x6b9d20;
+    private static int mpaddress = 0x5bdf70;
+    private static int zmaddress = 0;
     #region Variable Declarations
     private static byte[] WrapperTocBuf_AddText = new byte[] { 
             0x55, 0x8b, 0xec, 0x83, 0xec, 8, 0xc7, 0x45, 0xf8, 0, 0, 0, 0, 0xc7, 0x45, 0xfc, 
@@ -65,12 +65,12 @@ public class BO2Console
                 ProcessHandle = OpenProcess(0x1f0fff, false, ProcessID);
                 if (HandleProcess("t6mp"))
                 {
-                    WriteNOP(0x8c923a);
+                    WriteNOP(0x8c90da);
                 }
             }
             Send(command);
         }
-        else if (zmprocess.Length != 0)
+        else if (zmprocess.Length != 0 & zmaddress != 0)
         {
             if (ProcessID != zmprocess[0].Id)
             {
