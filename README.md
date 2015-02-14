@@ -19,7 +19,7 @@ Every method retrieves true (if it was successfully executed) or false (if it fa
 
 Caution
 =======
-The addresses are updated to 9-1-2015
+Only the mp address is updated to 13/02/2015 take care when using for zombies.
 
 Acknowledgements
 ===============
