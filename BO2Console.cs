@@ -3,13 +3,15 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
-// This code were downloaded from https://github.com/ZoSHJ/Black-Ops-2-External-Console
+// This code was downloaded from https://github.com/ZoSHJ/Black-Ops-2-External-Console
 
 public class BO2Console
 {
     // Update the addresses here
     private static int mpaddress = 0x5bdf70;
     private static int zmaddress = 0;
+    private static int mpnopaddress = 0x8c90da;
+    private static int zmnopaddress = 0;
     #region Variable Declarations
     private static byte[] WrapperTocBuf_AddText = new byte[] { 
             0x55, 0x8b, 0xec, 0x83, 0xec, 8, 0xc7, 0x45, 0xf8, 0, 0, 0, 0, 0xc7, 0x45, 0xfc, 
@@ -63,9 +65,9 @@ public class BO2Console
             {
                 ProcessID = mpprocess[0].Id;
                 ProcessHandle = OpenProcess(0x1f0fff, false, ProcessID);
-                if (HandleProcess("t6mp"))
+                if (mpnopaddress != 0 && HandleProcess("t6mp"))
                 {
-                    WriteNOP(0x8c90da);
+                    WriteNOP(mpnopadress);
                 }
             }
             Send(command);
@@ -76,9 +78,9 @@ public class BO2Console
             {
                 ProcessID = zmprocess[0].Id;
                 ProcessHandle = OpenProcess(0x1f0fff, false, ProcessID);
-                if (HandleProcess("t6mp"))
+                if (zmnopaddress != 0 && HandleProcess("t6zp"))
                 {
-                    WriteNOP(0x8c7e7a);
+                    WriteNOP(zmnopaddress);
                 }
             }
             Send(command);
