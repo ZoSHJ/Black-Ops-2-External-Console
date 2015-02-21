@@ -67,7 +67,7 @@ public class BO2Console
                 ProcessHandle = OpenProcess(0x1f0fff, false, ProcessID);
                 if (mpnopaddress != 0 && HandleProcess("t6mp"))
                 {
-                    WriteNOP(mpnopadress);
+                    WriteNOP(mpnopaddress);
                 }
             }
             Send(command);
