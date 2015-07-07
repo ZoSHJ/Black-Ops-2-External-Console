@@ -9,9 +9,9 @@ public class BO2Console
 {
     // Update the addresses here
     private static int mpaddress = 0x5bdf70;
-    private static int zmaddress = 0;
+    private static int zmaddress = 0x4c7120;
     private static int mpnopaddress = 0x8c90da;
-    private static int zmnopaddress = 0;
+    private static int zmnopaddress = 0x8c768a;
     #region Variable Declarations
     private static byte[] WrapperTocBuf_AddText = new byte[] { 
             0x55, 0x8b, 0xec, 0x83, 0xec, 8, 0xc7, 0x45, 0xf8, 0, 0, 0, 0, 0xc7, 0x45, 0xfc, 
@@ -59,7 +59,7 @@ public class BO2Console
         }
         Process[] zmprocess = Process.GetProcessesByName("t6zm");
         Process[] mpprocess = Process.GetProcessesByName("t6mp");
-        if (mpprocess.Length != 0)
+        if (mpprocess.Length != 0 & mpaddress != 0)
         {
             if (ProcessID != mpprocess[0].Id)
             {
